@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 2.5em;
+  margin: 20px;
+}
+
+.quote {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #2e8b57;
+}
+
+.bouquet {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: bloom 2s infinite alternate;
+}
+
+.flower1 {
+  top: 20px;
+  left: 80px;
+  background-color: #ff6347;
+}
+
+.flower2 {
+  top: 60px;
+  left: 140px;
+  background-color: #ff4500;
+}
+
+.flower3 {
+  top: 60px;
+  left: 20px;
+  background-color: #ff1493;
+}
+
+.flower4 {
+  top: 100px;
+  left: 50px;
+  background-color: #db7093;
+}
+
+.flower5 {
+  top: 100px;
+  left: 110px;
+  background-color: #ffa07a;
+}
+
+@keyframes bloom {
+  from {
+      transform: scale(0.8);
+  }
+  to {
+      transform: scale(1.2);
+  }
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transform: rotate(-45deg);
+  animation: float 5s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 10px;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0) rotate(-45deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-1000px) rotate(-45deg);
+      opacity: 0;
+  }
+}
+
+.heart:nth-child(1) {
+  left: 20%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  left: 40%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+  left: 60%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.heart:nth-child(4) {
+  left: 80%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.heart:nth-child(5) {
+  left: 50%;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
